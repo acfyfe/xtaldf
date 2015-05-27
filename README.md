@@ -1,2 +1,2 @@
 # xtaldf
-compute distance field from the molecular surface of a  atomic model encoded  pdb file
+compute the distance field, via level-set methods,  from the molecular surface of an  atomic model encoded as a pdb file
