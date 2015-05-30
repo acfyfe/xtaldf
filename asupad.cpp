@@ -40,9 +40,9 @@
 
 /*  asupad : preprocessing utility for distance field computation
 
-   Given an input PDB file, refer all atom to the ASU then generate an output
+   Given an input PDB file, refer all atoms to the ASU then generate an output
    PDB ("dfgen.pdb") consisting of either (1) the asu expanded to a specified
-   width, given by the "asuPad" argument, as a fractional coordinate, or (2) 
+   width, given by the "asuPad" argument as a fractional coordinate, or (2) 
    the symmetry-expanded  atoms that  occupy a given quadrilateral box 
    given by "boxSize" and padded by  "borderMult".
 

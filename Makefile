@@ -1,5 +1,5 @@
 
-# to build, create a link to a directory with CCP4 a installation which includes
+# to build, create a link to a directory with CCP4 installation that  includes
 # distribution libraries and header files
 CCP4=./CCP4
 
@@ -22,11 +22,13 @@ DFGEN_LDFLAGS=  -L${LCCP4} -Wl,-rpath,${CCP4}/lib
 %:		%.cpp %.o
 		${CXX} $(CFLAGS) $(CPPFLAGS) -c $@ $< 
 
-DFGEN_OBJS= dfgen.o elemtab.o
+DFGEN_OBJS= dfg.o elemtab.o sphere.o
 
 
-all: asupad
+all: asupad dfg
 
 asupad:		asupad.o
 		${CXX} $(CFLAGS) $(CPPFLAGS) $(DFGEN_LDFLAGS)  $< ${DFGENLIBS} -o $@
 
+dfg:		$(DFGEN_OBJS)
+		${CXX} $(CFLAGS) $(CPPFLAGS) $(DFGEN_LDFLAGS)  $(DFGEN_OBJS) ${DFGENLIBS} -o $@
